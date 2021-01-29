@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <title>Simple Pricing</title>
+</head>
+<body>
+ 
+    <!-- header -->
+    <div class="header">
+      <h1>Simple Pricing</h1>
+      <p id="paragraf">The most advanced customer support tools with a simple and affordable pricing. And you can always try for 30 days, free!</p>
+    </div>
+    <!-- end header -->
+    <div class="container">
+      <div class="card">
+        <div class="card-header">
+          <p>basic</p>
+        </div>
+        <div class="card-price">
+            <p><span class="top-text">$</span>4<span class="bottom-text">/month</span></p>
+            <hr>
+        </div>
+        <div class="card-body">
+              <p><strong>10</strong> Projects</p>
+              <p><strong>10</strong> Pages</p>
+              <p><strong>100</strong> Mb Disk Space</p>
+        </div>
+        <div class="btn">
+          <button id="done" onclick="clickMe()">buy now</button>
+        </div>
+      </div> 
+      <div class="card">
+        <div class="card-header">
+          <p id="float-left">standard</p>
+          <p id="float-right">Save 15%</p>
+        </div>
+        <div class="card-price">
+            <p><span class="top-text">$</span>8<span class="bottom-text">/month</span></p>
+            <hr>
+        </div>
+        <div class="card-body">
+              <p><strong>20</strong> Projects</p>
+              <p><strong>20</strong> Pages</p>
+              <p><strong>200</strong> Mb Disk Space</p>
+        </div>
+        <div class="btn">
+          <button id="done" onclick="clickMe()">buy now</button>
+        </div>
+      </div> 
+      <div class="card">
+        <div class="card-header">
+          <p>advanced</p>
+        </div>
+        <div class="card-price">
+            <p><span class="top-text">$</span>12<span class="bottom-text">/month</span></p>
+            <hr>
+        </div>
+        <div class="card-body">
+              <p><strong>40</strong> Projects</p>
+              <p><strong>40</strong> Pages</p>
+              <p><strong>500</strong> Mb Disk Space</p> 
+        </div>
+        <div class="btn">
+          <button id="done" onclick="clickMe()">buy now</button>
+        </div>
+        
+      </div>  
+    </div>   
+    <h2 class="faq-title">Frequently Asked Questions</h2> 
+    <div class="faq">
+        <div class="paragraph-faq">
+            <p><strong>How does free trial work?</strong></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quibusdam quis tenetur! Nisi beatae magni corrupti est aut perspiciatis cumque, fugit sequi perferendis id consequuntur quos ut alias magnam itaque?</p>
+        </div>
+        <div class="paragraph-faq">
+            <p><strong> I cancel any time?</strong></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quibusdam quis tenetur! Nisi beatae magni corrupti est aut perspiciatis cumque, fugit sequi perferendis id consequuntur quos ut alias magnam itaque?</p>
+        </div>
+    </div>
+  </div>
+  <script>
+      const clickMe = () => {
+          alert("Congratulations!\nYou're successfully purchased this package!")
+          showText()
+      }
+      const showText = () => {
+        document.getElementById("done").innerHTML = 'Thank you!'
+      }
+  </script>
+</body>
+</html>

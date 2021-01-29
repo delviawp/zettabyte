@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap");
+
+:root {
+  --primary-color: #00004c;
+  --heading-font: "Raleway", sans-serif;
+
+  --space-xs: 8px;
+  --space-sm: 23px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 74px;
+}
+
+* {
+  box-sizing: border-box;
+  /* font: inherit;
+  color: inherit; */
+}
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: var(--heading-font);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+hr {
+  width: 80%;
+}
+
+strong {
+  font-weight: bolder;
+}
+/* 
+.page {
+  background-color: var(--primary-color);
+  height: 100%;
+} */
+
+/* header */
+
+.header {
+  background-color: var(--primary-color);
+  height: 70vh;
+  text-align: center;
+  line-height: 1.3;
+  padding: var(--space-2xl) 0;
+}
+
+#paragraf {
+  line-height: 1.4;
+  /* padding: 2px 0; */
+  width: 450px;
+  margin: 20px auto;
+}
+
+.header #paragraf {
+  color: white;
+}
+
+/* end header */
+
+/* card  */
+
+.container {
+  margin-left: 100px;
+  margin-top: -25vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: white;
+  width: 18em;
+  height: 34em;
+  margin: 0 var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.card-header {
+  color: white;
+  height: auto;
+  background-color: rgb(37, 34, 34);
+  text-transform: uppercase;
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 20px;
+}
+
+#float-left {
+  float: left;
+}
+
+#float-right {
+  float: right;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.card-price {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.top-text {
+  vertical-align: text-top;
+}
+
+.bottom-text {
+  vertical-align: text-bottom;
+}
+
+.bottom-text,
+.top-text {
+  color: grey;
+  font-size: 0.3em;
+}
+
+.card-body {
+  margin-left: var(--space-xl);
+}
+
+.btn {
+  margin-top: var(--space-sm);
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: #0000ff;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* end card  */
+
+/* FAQ */
+
+.faq-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 60px;
+}
+
+.faq {
+  text-align: center;
+  padding: var(--space-sm);
+}
+
+/* END FAQ */
+
+/* media query */
+
+@media (min-width: 760px) {
+  .container {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .faq {
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 1.4;
+    margin: var(--space-md) auto;
+    width: 1050px;
+    gap: 72px;
+    text-align: left;
+  }
+}
