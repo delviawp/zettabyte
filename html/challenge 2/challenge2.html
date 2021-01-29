@@ -48,7 +48,7 @@
               <p><strong>200</strong> Mb Disk Space</p>
         </div>
         <div class="btn">
-          <button id="done" onclick="clickMe()">buy now</button>
+          <button id="done2" onclick="clickMe2()">buy now</button>
         </div>
       </div> 
       <div class="card">
@@ -65,7 +65,7 @@
               <p><strong>500</strong> Mb Disk Space</p> 
         </div>
         <div class="btn">
-          <button id="done" onclick="clickMe()">buy now</button>
+          <button id="done3" onclick="clickMe3()">buy now</button>
         </div>
         
       </div>  
@@ -89,6 +89,20 @@
       }
       const showText = () => {
         document.getElementById("done").innerHTML = 'Thank you!'
+      }
+      const clickMe2 = () => {
+          alert("Congratulations!\nYou're successfully purchased this package!")
+          showText2()
+      }
+      const showText2 = () => {
+        document.getElementById("done2").innerHTML = 'Thank you!'
+      }
+      const clickMe3 = () => {
+          alert("Congratulations!\nYou're successfully purchased this package!")
+          showText3()
+      }
+      const showText3 = () => {
+        document.getElementById("done3").innerHTML = 'Thank you!'
       }
   </script>
 </body>
