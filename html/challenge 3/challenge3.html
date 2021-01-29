@@ -4,49 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style3.css">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Post</title>
 </head>
 <body>
     <div class="container">
-      <div class="avatar">
-          <img id="avatar" src="pic3.jpeg"> 
-      </div>
-      <div class="username">
-          <p><span>Garry Newman</span> posted on your timeline</p>
-          <p class="time">32 minutes ago</p>
-      </div>
-      <p>Remember the place we were talking about the other night? Found it!</p>
-      <img>
+      <div class="box-user">
+          <div class="user-avatar">
+            <img id="avatar" src="pic4.jpeg">
+          </div> 
+          <div class="user-info">
+          <p><span id="name-user">Garry Newman</span> posted on your timeline</p>
+          <p class="time">32 minutes ago</p> 
+          </div>
+          <i id="dot" class="fas fa-ellipsis-v"></i>
+      </div>  
+      <p class="caption">Remember the place we were talking about the other night? Found it!</p>
+      <img id="pic-view" src="pic1.jpg" height="400" width="680">
       <div class="icon">
-          <i>heart icon</i>
-          <p>Like (5) </p>
-          <i>Shre icon </i>
-          <p>Share (21) </p>
+        <i class="fas fa-heart"> Like (5)</i>
+          <i class="fas fa-share-alt"> Share (21)</i>
       </div>
       <div class="comment-section">
-          <p>1 comments</p>
-          <div class="comment">
-              <div class="avatar">
-                  <img>
+       <div class="box-comment">   
+        <div class="total-comment">
+          <p>1 comment <i class="fas fa-chevron-down"></i></p>
+        </div>  
+          <div class="box-user">
+              <div class="user-avatar">
+                  <img id="avatar" src="pic5.jpeg">
               </div>
-              <div class="username">
-                  <p> Alice Freeman <span>June 10 2018</span></p>
-              </div>
-              <div class="comment-content">
+              <div class="user-info">
+                  <p> Alice Freeman <span>June 10, 2018</span></p>
                   <p>That's a wonderful place. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius sequi voluptate ratione hic aperiam recusandae alias, harum deleniti necessitatibus similique, nisi commodi modi laborum cupiditate placeat est! Omnis, exercitationem dolores?</p>
-                <span>Reply</span>
-              </div>
-              <div class="empty-comment">
-                  <div class="avatar">
-                      <img>
-                  </div>
-                  <div class="text">
-                      <input type="text-area">
-                  </div>
-                  <button>Post Comment</button>
+                    <p style="color: blue;">Reply <i id="flag" class="far fa-flag"></i></p>  
               </div>
           </div>
+          <div class="box-user">
+            <div class="user-avatar">
+                <img id="avatar" src="pic2.jpeg">
+            </div>
+            <div class="user-info">
+             <textarea rows="5" cols="73">Add a comment...</textarea>  
+             <!-- <div class="btn"> -->
+               <button>Post Comment</button>
+             <!-- </div> -->
+            </div>
+        </div>
       </div>
+    </div>
     </div>
 </body>
 </html>
