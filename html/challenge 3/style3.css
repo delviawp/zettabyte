@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #00004c;
+  --heading-font: "Raleway", sans-serif;
+
+  --space-xs: 8px;
+  --space-sm: 23px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 74px;
+}
+
+* {
+  box-sizing: border-box;
+  /* font: inherit;
+    color: inherit; */
+}
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: var(--heading-font);
+}
+
+#avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+}

@@ -81,6 +81,12 @@ strong {
   height: 34em;
   margin: 0 var(--space-sm);
   margin-bottom: var(--space-sm);
+  transition: all 1.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .card-header {
