@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-5">[NPC] Beginner Merchant</h2>
+        <p class="mb-5 mt-5">Hello Adventurer, welcome to the town of Angular!
+        <br>
+        Here you can explore all the exciting stuff like meeting weird monster, learning new spell and discovering rare item.
+        <br>
+        But first, you need some weapon/spell to accompany you along the way!
+        <br>
+        I will give you 1000 gold, so choose your weapon/spell wisely~</p>
+    
+        <div class="row">
+            <div
+            *ngFor="let list of lists" 
+            [class.selected]="list === selectedItem" 
+            (click)="onSelect(list)"
+            class="col-6 col-md-4">
+            <div class="card-deck">
+                <div class="card mb-5 text-justify" id="card-contain">
+                    <div class="card-title text-center">{{list.name}}</div>
+                    <div class="card-text text-center">Price: {{list.price}}</div>
+                    <img class="card-img-top mx-auto img-fluid" src="{{list.image}}" style="height: 150px; width: 200px;">
+                    <div class="card-body">
+                    <div class="card-text" id="desc">{{list.desc}}</div>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fa fa-shopping-cart float-right">Add to Cart</i>
+                    </div>
+                </div>
+            </div>
+            </div>  
+        </div>
+       
+        <hr>
+        <h3 class="mt-3">Added to cart:</h3>
+        <div *ngIf="selectedItem">
+           <h4>{{selectedItem.name}}</h4>
+           <h4>{{selectedItem.price}}</h4>
+        </div>
+    </div>
+    
+</body>
+</html>

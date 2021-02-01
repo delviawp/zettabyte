@@ -1,0 +1,27 @@
+/* * {
+  margin-left: 100px;
+  margin-right: 100px;
+  box-sizing: border-box;
+} */
+
+h2,
+p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* #middle-text {
+  padding-top: 50px;
+  padding-left: 360px;
+  line-height: 28px;
+  margin-bottom: 30px;
+} */
+
+#card-contain {
+  height: 33rem;
+}
+
+#desc {
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
