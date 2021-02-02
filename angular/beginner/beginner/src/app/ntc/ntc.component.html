@@ -23,8 +23,6 @@
         <div class="row">
             <div
             *ngFor="let list of lists" 
-            [class.selected]="list === selectedItem" 
-            (click)="onSelect(list)"
             class="col-6 col-md-4">
             <div class="card-deck">
                 <div class="card mb-5 text-justify" id="card-contain">
@@ -35,7 +33,8 @@
                     <div class="card-text" id="desc">{{list.desc}}</div>
                     </div>
                     <div class="card-footer">
-                        <i class="fa fa-shopping-cart float-right">Add to Cart</i>
+                        <a style="cursor: pointer;"><i (click)="addToCart(list)" *ngIf="!list.addedToCart" class="fa fa-cart-plus float-right">Add to Cart</i></a>
+                        <a style="cursor: pointer;"><i (click)="addToCart(list)" *ngIf="list.addedToCart" class="fa fa-shopping-cart float-right" style="color: blue;">Add to Cart</i></a>
                     </div>
                 </div>
             </div>
@@ -43,11 +42,22 @@
         </div>
        
         <hr>
-        <h3 class="mt-3">Added to cart:</h3>
-        <div *ngIf="selectedItem">
-           <h4>{{selectedItem.name}}</h4>
-           <h4>{{selectedItem.price}}</h4>
-        </div>
+        
+        <h3>Added To Cart:</h3>
+        <table class="table">
+                <tbody>
+                    <tr *ngFor="let item of cart">
+                        <th scope="row">{{item.name}}</th>
+                        <th scope="row">{{item.price}}</th>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th scope="col">Total :</th>
+                    <th scope="col">{{totalCart}}</th>
+                </tfoot>
+           </table>
+           
+        <button class="btn btn-primary" style="width:1120px;" (click)="BuyButton()">Buy</button>
     </div>
     
 </body>
